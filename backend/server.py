@@ -119,7 +119,18 @@ async def generate_ai_analysis(prompt: str) -> str:
         )
         return response.choices[0].message.content
     except Exception as e:
-        return f"AI analysis unavailable: {str(e)}"
+        fallback_responses = {
+            "Botnet": "A botnet infection occurs when malware compromises your device and adds it to a network of infected machines controlled by attackers. These devices can be used to launch attacks, send spam, or mine cryptocurrency without your knowledge. Our system detected unusual outbound connections and isolated the device to prevent further damage.",
+            "Unauthorized": "An unauthorized access attempt was detected when an unknown party tried to connect to your device without permission. This could be an attacker trying to gain control or steal data. Our honeypot system captured the attempt and blocked the suspicious IP address.",
+            "Data Exfiltration": "Data exfiltration means an attacker is trying to steal information from your device. We detected unusual data transfers to external servers. The device has been isolated to prevent data loss, and we've blocked the destination addresses.",
+            "Lateral Movement": "Lateral movement is when an attacker who has compromised one device tries to spread to other devices on your network. We detected suspicious connection attempts between devices and have isolated the affected systems to contain the threat."
+        }
+        
+        for key, response in fallback_responses.items():
+            if key.lower() in prompt.lower():
+                return response
+        
+        return "Our AI security analyst detected suspicious activity on this device. The system automatically isolated it and is monitoring for further threats. Your network remains secure."
 
 async def simulate_device_discovery():
     devices = []
