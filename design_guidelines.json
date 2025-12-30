@@ -1,0 +1,144 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "The Anti-AI Designer",
+    "mission": "Create a 'Control Room' aesthetic that feels like a military-grade cyber defense system, not a generic SaaS dashboard.",
+    "principles": [
+      "Fusion: Mix 'Swiss Brutalism' with 'Cyberpunk Interface'.",
+      "Emotion: Vigilance, Control, Precision.",
+      "Content: Data is the art. Dense, correlated, live.",
+      "Negative Space: Use it to group functional zones, not just for air.",
+      "Contrast: High-contrast neon against void black."
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "style": "Cyber Defense / Control Room",
+    "emotional_archetype": "Electric & Neon",
+    "visual_mood": "Dark, Holographic, Data-Dense"
+  },
+  "typography": {
+    "primary_font": "Manrope",
+    "heading_font": "Rajdhani",
+    "mono_font": "JetBrains Mono",
+    "google_fonts_import": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap",
+    "usage": {
+      "h1": "font-heading font-bold text-4xl tracking-tight uppercase",
+      "h2": "font-heading font-semibold text-2xl tracking-tight",
+      "body": "font-sans text-base text-muted-foreground",
+      "data": "font-mono text-sm text-primary/90",
+      "label": "font-mono text-xs uppercase tracking-widest text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#050505",
+      "foreground": "#fafafa",
+      "card": "#0a0a0a",
+      "card_foreground": "#fafafa",
+      "primary": "#00f0ff",
+      "primary_foreground": "#000000",
+      "secondary": "#1a1a1a",
+      "secondary_foreground": "#fafafa",
+      "muted": "#171717",
+      "muted_foreground": "#a1a1aa",
+      "accent": "#262626",
+      "accent_foreground": "#fafafa",
+      "destructive": "#ff2a6d",
+      "destructive_foreground": "#fafafa",
+      "border": "#27272a",
+      "input": "#27272a",
+      "ring": "#00f0ff"
+    },
+    "status": {
+      "safe": "#00ff9d",
+      "warning": "#ffb800",
+      "critical": "#ff2a6d",
+      "neutral": "#52525b"
+    },
+    "gradients": {
+      "hero": "linear-gradient(135deg, #00f0ff 0%, #000000 100%)",
+      "alert": "linear-gradient(135deg, #ff2a6d 0%, #000000 100%)",
+      "glass": "rgba(10, 10, 10, 0.7)"
+    }
+  },
+  "layout": {
+    "grid_system": "The 'Control Room' Grid",
+    "container_padding": "p-6 md:p-8 lg:p-12",
+    "gap": "gap-4 md:gap-6",
+    "border_radius": "rounded-none md:rounded-sm",
+    "modes": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-4",
+      "detail": "grid grid-cols-1 lg:grid-cols-3 gap-8"
+    }
+  },
+  "components": {
+    "card": {
+      "style": "bg-card/50 backdrop-blur-md border border-border/50 hover:border-primary/50 transition-colors duration-300",
+      "header": "border-b border-border/50 p-4",
+      "content": "p-4"
+    },
+    "button": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 font-mono uppercase tracking-wider rounded-sm",
+      "destructive": "bg-destructive text-destructive-foreground hover:bg-destructive/90 font-mono uppercase tracking-wider rounded-sm",
+      "outline": "border border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider rounded-sm"
+    },
+    "badge": {
+      "style": "font-mono uppercase tracking-widest text-[10px] px-2 py-0.5 rounded-full border"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-black/60 border-white/10",
+    "neon_glow": "shadow-[0_0_10px_rgba(0,240,255,0.3)]",
+    "scanlines": "bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))]",
+    "grid_background": "bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:4rem_4rem]"
+  },
+  "media": {
+    "images": [
+      {
+        "category": "device_thumbnails",
+        "url": "https://images.pexels.com/photos/17036353/pexels-photo-17036353.jpeg",
+        "description": "Modern smart home hub device"
+      },
+      {
+        "category": "device_thumbnails",
+        "url": "https://images.pexels.com/photos/18454153/pexels-photo-18454153.jpeg",
+        "description": "IoT sensor close up"
+      },
+      {
+        "category": "security_abstract",
+        "url": "https://images.pexels.com/photos/5473960/pexels-photo-5473960.jpeg",
+        "description": "Abstract digital lock concept"
+      },
+      {
+        "category": "security_abstract",
+        "url": "https://images.pexels.com/photos/8090151/pexels-photo-8090151.jpeg",
+        "description": "Cyber security shield concept"
+      }
+    ],
+    "icons": "Use 'lucide-react' for all UI icons. Use 'SquareActivity', 'ShieldAlert', 'Network', 'Cpu', 'Radio' for navigation."
+  },
+  "libraries": {
+    "charts": "recharts",
+    "topology": "react-force-graph-2d",
+    "animations": "framer-motion",
+    "icons": "lucide-react",
+    "utils": "clsx, tailwind-merge"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL DEPENDENCIES: Run 'npm install recharts react-force-graph-2d framer-motion' immediately.",
+    "2. UPDATE TAILWIND: Update 'tailwind.config.js' to include the new colors and fonts defined in this JSON.",
+    "3. CREATE LAYOUT: Build a 'DashboardLayout' component that uses a fixed sidebar and a top bar with glassmorphism.",
+    "4. BUILD TOPOLOGY: Create a 'NetworkGraph' component using 'react-force-graph-2d'. It should be interactive (zoom/pan).",
+    "5. IMPLEMENT THEME: Enforce dark mode by default. Add the 'dark' class to the html or body tag.",
+    "6. USE SHADCN: Use the existing Shadcn components but override their styles using the 'components' rules above (e.g., remove rounded corners, add borders).",
+    "7. DATA-TESTID: Add 'data-testid' to all interactive elements."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for text.",
+    "Avoid centered layouts for dashboard content.",
+    "Use 2-3x more spacing than typical designs.",
+    "Every interaction needs micro-animations.",
+    "Use 'sonner' for toasts."
+  ]
+}
